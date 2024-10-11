@@ -47,7 +47,8 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  filter: blur(5px) brightness(80%);
+  filter: blur(5px);
+  opacity: 10%;
 }
 
 .credits {
