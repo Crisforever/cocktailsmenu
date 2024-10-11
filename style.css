@@ -200,7 +200,8 @@ hr {
   }
 
   .background {
-
+    filter: blur(30px);
+    opacity: 100%;
     background-position: center;
   }
 
