@@ -1,0 +1,171 @@
+:root {
+  font-family: sans-serif;
+  background-color: black;
+  --purple: #b197fc;
+  --cyan: #74b9ff;
+  --forescent: #55efc4;
+  --pink: #fd79a8;
+}
+
+/* Estilos para la barra de desplazamiento vertical */
+::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+/* Ocultar los botones de incremento y decremento de la barra de desplazamiento */
+::-webkit-scrollbar-button:increment,
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Estilos para la barra de desplazamiento horizontal */
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+/* Estilos para el pulgar (thumb) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+/* Estilos para la pista (track) de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.background {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/58ed2ca2197aea316ec194f3/1672942837513-UKR1HEYSWI12DRG4IZ3X/bar-paloma+-warsaw-poland-neon.gif?format=1500w");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(5px) brightness(80%);
+}
+
+.credits {
+  display: block;
+  text-align: center;
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+}
+
+.text-legend {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px var(--pink),
+    0 0 82px var(--pink), 0 0 92px var(--pink), 0 0 102px var(--pink),
+    0 0 151px var(--pink);
+
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: animation-legend;
+  animation-duration: 10s;
+}
+
+form {
+  color: #fff;
+  max-width: 700px;
+  width: auto;
+  min-width: 150px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border-color: #fd79a8;
+  box-shadow: 0px 13px 68px -16px var(--pink);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: animation;
+  animation-duration: 10s;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-item > div:nth-child(1) {
+  width: 75%;
+}
+
+.flex-item > div:nth-child(2) {
+  width: 25%;
+  text-align: right;
+}
+
+.description {
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+  text-align: justify;
+  font-size: 14px;
+}
+
+@keyframes animation {
+  0% {
+    border-color: var(--pink);
+    box-shadow: 0px 13px 68px -16px var(--pink);
+  }
+
+  35% {
+    border-color: var(--cyan);
+    box-shadow: 0px 13px 68px -16px var(--cyan);
+  }
+
+  50% {
+    border-color: var(--forescent);
+    box-shadow: 0px 13px 68px -16px var(--forescent);
+  }
+
+  100% {
+    border-color: var(--purple);
+    box-shadow: 0px 13px 68px -16px var(--purple);
+  }
+}
+
+@keyframes animation-legend {
+  0% {
+    text-shadow: 0 0 7px var(--pink), 0 0 10px var(--pink), 0 0 21px black,
+      0 0 42px var(--pink), 0 0 82px var(--pink), 0 0 92px var(--pink),
+      0 0 102px var(--pink), 0 0 151px var(--pink);
+  }
+
+  30% {
+    text-shadow: 0 0 7px var(--cyan), 0 0 10px var(--cyan), 0 0 21px black,
+      0 0 42px var(--cyan), 0 0 82px var(--cyan), 0 0 92px var(--cyan),
+      0 0 102px var(--cyan), 0 0 151px var(--cyan);
+  }
+
+  60% {
+    text-shadow: 0 0 7px var(--forescent), 0 0 10px var(--forescent),
+      0 0 21px black, 0 0 42px var(--forescent), 0 0 82px var(--forescent),
+      0 0 92px var(--forescent), 0 0 102px var(--forescent),
+      0 0 151px var(--forescent);
+  }
+
+  100% {
+    text-shadow: 0 0 7px var(--purple), 0 0 10px var(--purple), 0 0 21px black,
+      0 0 42px var(--purple), 0 0 82px var(--purple), 0 0 92px var(--purple),
+      0 0 102px var(--purple), 0 0 151px var(--purple);
+  }
+}
